@@ -76,12 +76,14 @@ body {
     }
     & img {
         height: 200px;
-        width: auto;
+        width: 200px;
         align-self: center;
+        border-radius: 50%;
         @include breakpoints(laptop) {
           height: 200px;
-          width: auto;
+          width: 200px;
           align-self: center;
+          border-radius: 50%;
         }
     }
     & .name {
