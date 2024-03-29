@@ -1,12 +1,14 @@
-@import './varaibles';
-@import './resets';
-@import './mixins';
-@import './menubutton';
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Teko:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import "./varaibles";
+@import "./resets";
+@import "./mixins";
+@import "./menubutton";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Teko:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: $font-color;
@@ -14,91 +16,87 @@ body {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 .menu-btn {
   margin-left: 1rem;
   padding: 0.5rem;
 }
 .left-panel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    opacity: .98;
-    text-align: center;
-    justify-content: center;
-    display: none;
-    margin-left: -1rem;
-    
-    @include breakpoints(laptop){
-      position: absolute;
-      visibility: visible;
-      width: 21vw;
-      height: 100vh;
-      background: $web-color;
-      overflow-y: scroll;
-      text-align: center;
-      display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  text-align: center;
+  justify-content: center;
+  display: none;
+  margin-left: -1rem;
 
-    }
-    
-   
+  @include breakpoints(laptop) {
+    position: absolute;
+    visibility: visible;
+    width: 21vw;
+    height: 100vh;
+    background: $web-color;
+    overflow-y: scroll;
+    text-align: center;
+    display: block;
+  }
 }
 .some-quotes {
-    margin-top: 50px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-weight: map-get($font-weights, bold);
-    
-    & p {
-        color: skyblue;
-        font-size: x-large;
-    }
-    & span {
-        color: peru;
-    }
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: map-get($font-weights, bold);
+
+  & p {
+    color: skyblue;
+    font-size: x-large;
+  }
+  & span {
+    color: peru;
+  }
 }
 .my-name {
-    height: 400px;
-    margin-top: 50px;
-    margin-left: 20px;
-    font-size: larger;
-    color: #272727;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  height: 400px;
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: larger;
+  color: #272727;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @include breakpoints(laptop) {
+    height: 600px;
+  }
+  & img {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    border-radius: 50%;
     @include breakpoints(laptop) {
-      height: 600px;
+      height: 200px;
+      width: 200px;
+      align-self: center;
+      border-radius: 50%;
     }
-    & img {
-        height: 200px;
-        width: 200px;
-        align-self: center;
-        border-radius: 50%;
-        @include breakpoints(laptop) {
-          height: 200px;
-          width: 200px;
-          align-self: center;
-          border-radius: 50%;
-        }
-    }
-    & .name {
-        font-family: 'League', sans-serif;
-        font-size: xx-large;
-        
-    & .email {
-        font-style: italic;
-        @include breakpoints(laptop) {
-          font-style: italic;
-          font-size: large;
-        }
-    }
+  }
+  & .name {
+    font-family: "League", sans-serif;
+    font-size: xx-large;
 
-}
+    & .email {
+      font-style: italic;
+      @include breakpoints(laptop) {
+        font-style: italic;
+        font-size: large;
+      }
+    }
+  }
 }
 #pages-link {
   margin-top: -80px;
@@ -129,12 +127,12 @@ a {
   font-size: map-get($font-weights, medium);
 }
 #social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 300px;
-    justify-content: space-evenly;
-    text-decoration-line: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: space-evenly;
+  text-decoration-line: none;
 }
 
 .main-body {
@@ -152,49 +150,53 @@ a {
 }
 /* Slideshow container */
 .slideshow-container {
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  @include breakpoints(laptop) {
     max-width: 100%;
-    text-align: center;
     position: relative;
-    @include breakpoints(laptop) {
-      max-width: 100%;
-      position: relative;
-      margin: auto;
-      //padding-right: 0.5rem;
-    }
+    margin: auto;
+    //padding-right: 0.5rem;
   }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
-    
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  to {
+    opacity: 1;
   }
-  
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+}
 
 .mySlides img {
   width: 100%;
@@ -207,14 +209,14 @@ a {
     width: 100%;
   }
 }
-.mySlides .first{
+.mySlides .first {
   @include breakpoints(mobileS) {
-  position: absolute;
-  right: 110px;
-  top: 445px;
-  color: hsl(200, 40%, 70%);
-  font-size: 15px;
-  font-weight: 300;
+    position: absolute;
+    right: 110px;
+    top: 445px;
+    color: hsl(200, 40%, 70%);
+    font-size: 15px;
+    font-weight: 300;
   }
   @include breakpoints(mobileM) {
     position: absolute;
@@ -223,14 +225,14 @@ a {
     color: hsl(200, 40%, 70%);
     font-size: 20px;
     font-weight: 300;
-    }
+  }
   @include breakpoints(mobileL) {
-  position: absolute;
-  right: 120px;
-  top: 435px;
-  color: hsl(200, 40%, 70%);
-  font-size: 20px;
-  font-weight: map-get($font-weights, medium);
+    position: absolute;
+    right: 120px;
+    top: 435px;
+    color: hsl(200, 40%, 70%);
+    font-size: 20px;
+    font-weight: map-get($font-weights, medium);
   }
   @include breakpoints(tablet) {
     position: absolute;
@@ -239,80 +241,75 @@ a {
     color: hsl(200, 40%, 70%);
     font-size: 30px;
     font-weight: map-get($font-weights, medium);
-    }
-  @include breakpoints(laptop){
+  }
+  @include breakpoints(laptop) {
     position: absolute;
     right: 300px;
     top: 400px;
-    color:hsl(200, 40%, 70%);
+    color: hsl(200, 40%, 70%);
     font-weight: map-get($font-weights, xbold);
     font-size: 40px;
   }
-  
-  
 }
-.mySlides .text1{
+.mySlides .text1 {
   @include breakpoints(mobileS) {
-  padding-bottom: 1.5rem;
-  position: absolute;
-  top: 550px;
-  right: 45px;
-  border: solid, #212121, 5px;
-  width: 90px;
-  height: 20px;
-  border-radius: 10px;
-  text-decoration-line: none;
-  text-align: center;
-  background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
-  a {
+    padding-bottom: 1.5rem;
+    position: absolute;
+    top: 550px;
+    right: 45px;
+    border: solid, #212121, 5px;
+    width: 90px;
+    height: 20px;
+    border-radius: 10px;
     text-decoration-line: none;
-    text-decoration-color: aqua;
-    color: #fff;
-    font-size: 12px;
-    
+    text-align: center;
+    background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
+    a {
+      text-decoration-line: none;
+      text-decoration-color: aqua;
+      color: #fff;
+      font-size: 12px;
+    }
   }
-}
   @include breakpoints(mobileM) {
-  padding-bottom: 1.4rem;
-  position: absolute;
-  top: 550px;
-  right: 45px;
-  border: solid, #212121, 5px;
-  width: 100px;
-  height: 20px;
-  border-radius: 10px;
-  text-decoration-line: none;
-  text-align: center;
-  background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
-  a {
-    padding: 0.7rem;
+    padding-bottom: 1.4rem;
+    position: absolute;
+    top: 550px;
+    right: 45px;
+    border: solid, #212121, 5px;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
     text-decoration-line: none;
-    text-decoration-color: aqua;
-    color: #fff;
-    font-size: 15px;
-    
-  }
+    text-align: center;
+    background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
+    a {
+      padding: 0.7rem;
+      text-decoration-line: none;
+      text-decoration-color: aqua;
+      color: #fff;
+      font-size: 15px;
+    }
   }
   @include breakpoints(mobileL) {
-  padding: 0.2rem;
-  position: absolute;
-  top: 550px;
-  right: 45px;
-  border: solid, #212121, 5px;
-  width: 100px;
-  height: 25px;
-  border-radius: 10px;
-  text-decoration-line: none;
-  text-align: center;
-  background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
-  a {
-    padding: 1.2rem;
+    padding: 0.2rem;
+    position: absolute;
+    top: 550px;
+    right: 45px;
+    border: solid, #212121, 5px;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
     text-decoration-line: none;
-    text-decoration-color: aqua;
-    color: #fff;
-    font-size: map-get($font-weights, medium);
-    
-  }
+    text-align: center;
+    background: linear-gradient(40deg, hsl(10, 89%, 51%), hsl(200, 40%, 70%));
+    a {
+      padding: 1.2rem;
+      text-decoration-line: none;
+      text-decoration-color: aqua;
+      color: #fff;
+      font-size: map-get($font-weights, medium);
+    }
   }
   @include breakpoints(tablet) {
     padding-bottom: 1.5rem;
@@ -331,9 +328,8 @@ a {
       text-decoration-color: aqua;
       color: #fff;
       font-size: 30px;
-      
     }
-    }
+  }
   @include breakpoints(laptop) {
     padding: 0.2rem;
     align-items: center;
@@ -381,7 +377,7 @@ a {
     right: 78px;
     color: hsl(10, 89%, 51%);
     font-size: xx-small;
-  }   
+  }
   @include breakpoints(tablet) {
     position: absolute;
     top: 425px;
@@ -389,7 +385,7 @@ a {
     color: hsl(10, 89%, 51%);
     font-size: small;
   }
-  @include breakpoints(laptop) {   
+  @include breakpoints(laptop) {
     position: absolute;
     top: 388px;
     right: 250px;
@@ -399,16 +395,15 @@ a {
 }
 
 #about-me-details h4 {
-    font-family: 'Teko';
-    font-weight: 200;
-    font-size: 30px;
-    text-align: start;
-    opacity: 70%;
-    margin-left: 1rem;
-
+  font-family: "Teko";
+  font-weight: 200;
+  font-size: 30px;
+  text-align: start;
+  opacity: 70%;
+  margin-left: 1rem;
 }
 #about-me-details h2 {
-  font-family: 'Cormorant SC', serif;;
+  font-family: "Cormorant SC", serif;
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem;
@@ -426,14 +421,14 @@ a {
   margin-top: 1.5rem;
 }
 .what-i-do-details h4 {
-  font-family: 'Teko';
+  font-family: "Teko";
   font-weight: 200;
   font-size: 30px;
   text-align: start;
   opacity: 70%;
 }
 .what-i-do-details h2 {
-  font-family: 'Cormorant SC', serif;;
+  font-family: "Cormorant SC", serif;
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem;
@@ -446,6 +441,12 @@ a {
     justify-content: space-between;
   }
 }
+
+.dev-image {
+  height: fit-content;
+  width: fit-content;
+}
+
 .dev1 {
   padding: 1rem;
   height: 200px;
@@ -456,16 +457,15 @@ a {
   justify-content: space-around;
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.19);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.19);
   border-bottom: hsl(200, 40%, 70%) solid 5px;
-  
 }
 #my-journey {
   text-align: center;
   padding: 1rem;
   // display: flex;
   & h4 {
-    font-family: 'Teko';
+    font-family: "Teko";
     font-weight: 200;
     font-size: 30px;
     text-align: start;
@@ -478,9 +478,9 @@ a {
   margin-left: 25px;
   margin-top: 8px;
   padding: 1rem;
-  
+
   @include breakpoints(laptop) {
-    margin-left: 65px;
+    margin-left: 240px;
     margin-top: 10px;
   }
 }
@@ -528,7 +528,6 @@ a {
   @include breakpoints(laptop) {
     width: 70%;
     height: 200px;
-
   }
 }
 .material-symbols-outlined {
@@ -543,9 +542,73 @@ a {
   border: #bbb solid 1px;
   border-radius: 50%;
   background: hsl(200, 40%, 70%);
-  
 }
 .fa-solid {
   color: #272727;
   margin-top: 0.4rem;
+}
+#my-projects {
+  text-align: center;
+  padding: 1rem;
+  // display: flex;
+  & h4 {
+    font-family: "Teko";
+    font-weight: 200;
+    font-size: 30px;
+    text-align: start;
+    opacity: 70%;
+    margin-bottom: 30px;
+  }
+}
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item .image-container {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+}
+
+.project-info {
+  margin-top: 10px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.project-description {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
