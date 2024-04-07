@@ -536,6 +536,15 @@ a {
     opacity: 50%;
   }
 }
+
+.work1 {
+  @include breakpoints(mobileS) {
+    font-size: 12px;
+  }
+  @include breakpoints(mobileL) {
+    font-size: 16px;
+  }
+}
 .font-container {
   height: 30px;
   width: 30px;
@@ -562,8 +571,22 @@ a {
 }
 #grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-gap: 20px;
+  @include breakpoints(mobileS) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 10px;
+  }
+  @include breakpoints(mobileL) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 10px;
+  }
+  @include breakpoints(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
 }
 
 .grid-item {
@@ -574,19 +597,33 @@ a {
 }
 
 .grid-item .image-container {
-  width: 100%;
-  height: 350px; /* Set a fixed height for the image container */
   overflow: hidden;
+  @include breakpoints(mobileS) {
+    width: 50%;
+    height: 100px;
+  }
+  @include breakpoints(laptop) {
+    width: 100%;
+    height: 350px; /* Set a fixed height for the image container */
+  }
 }
 
 .grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  object-fit: contain; /* Maintain aspect ratio and fill the container */
+  @include breakpoints(mobileS) {
+    width: 100%;
+    height: 100%;
+  }
+  @include breakpoints(laptop) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .project-info {
-  margin-top: 10px;
+  @include breakpoints(laptop) {
+    margin-top: 10px;
+  }
 }
 
 .project-title {
@@ -614,6 +651,9 @@ a {
 }
 .tools-container {
   margin-top: 10px;
+  @include breakpoints(mobileS) {
+    margin-bottom: 15px;
+  }
 }
 
 .tools-container .tools-label {
