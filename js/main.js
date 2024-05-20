@@ -150,7 +150,7 @@ const PROJECTS = [
     description:
       "Developed a beautiful, responsive client websites detailing their services, projects, about and many more",
     githubLink: "https://github.com/olartbaraq/segadesh",
-    demoLink: "segadesh.vercel.app",
+    demoLink: "https://segadesh.vercel.app",
   },
   // Add more project objects as needed
 ];
