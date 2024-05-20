@@ -131,6 +131,27 @@ const PROJECTS = [
       "https://github.com/olartbaraq/John_Crickett_Coding_Challenge/tree/main/Load_Balancer",
     demoLink: "",
   },
+  {
+    id: 7,
+    name: "Meteotunes",
+    image: "../assets/meteotunes.jpeg",
+    tools:
+      "Data Analytics, Next JS, Golang, net/http, Gemini LLM API, LimeWire Text to Image, Openweather API",
+    description:
+      "Developed a restful API that generates a near end imagery of app's users location using the combination of latitude and longitide, temperature, pressure, humidity of their location and suggest a perfect music to soothen that weather condition using various LLM's",
+    githubLink: "https://github.com/olartbaraq/MeteoTunes",
+    demoLink: "",
+  },
+  {
+    id: 8,
+    name: "Segadesh",
+    image: "../assets/segadesh.png",
+    tools: "Data Analytics, Next JS,",
+    description:
+      "Developed a beautiful, responsive client websites detailing their services, projects, about and many more",
+    githubLink: "https://github.com/olartbaraq/segadesh",
+    demoLink: "segadesh.vercel.app",
+  },
   // Add more project objects as needed
 ];
 
