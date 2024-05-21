@@ -138,7 +138,7 @@ const PROJECTS = [
     tools:
       "Data Analytics, Next JS, Golang, net/http, Gemini LLM API, LimeWire Text to Image, Openweather API",
     description:
-      "Developed a restful API that generates a near end imagery of app's users location using the combination of latitude and longitide, temperature, pressure, humidity of their location and suggest a perfect music to soothen that weather condition using various LLM's",
+      "Meteotunes is an AI-powered restful API that generates near real-time imagery of the user's location by combining latitude, longitude, temperature, pressure, and humidity data. Leveraging Large Language Models (LLMs) and other AI techniques, it suggests the perfect music playlist to complement the prevailing weather conditions, creating an immersive experience that blends visual weather representation with a curated audio backdrop tailored to the user's atmospheric environment.",
     githubLink: "https://github.com/olartbaraq/MeteoTunes",
     demoLink: "",
   },
